@@ -1,0 +1,14 @@
+{
+  "name": "vsimple-agent-explorer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node build-worker.js"
+  },
+  "dependencies": {
+    "@openai/sites-vite-plugin": "latest",
+    "vite": "latest"
+  }
+}
