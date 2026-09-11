@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vsimple-agent-explorer.onrender.com/sitemap.xml
