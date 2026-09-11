@@ -219,6 +219,140 @@
       .finder{padding-inline:17px}
       .roi-metrics{grid-template-columns:1fr}
     }
+
+    /* Unified catalogue and agent-detail system */
+    .agent-grid{grid-auto-rows:1fr}
+    .agent-card{display:grid;grid-template-rows:auto minmax(58px,auto) minmax(92px,auto) auto minmax(66px,auto) auto;gap:0;height:100%;min-height:500px;padding:24px;overflow:hidden}
+    .agent-card h3{align-self:start;margin:19px 0 10px}
+    .agent-card>.card-summary{align-self:start;margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+    .outcome-preview{align-self:start;margin:17px 0 13px;padding:15px;background:var(--lavender);border-radius:11px}
+    .outcome-preview>b,.variant-preview>b,.case-slot>b{display:block;margin-bottom:6px;color:var(--purple);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .outcome-preview strong{font:700 21px/1.05 "Origin Display",Arial,sans-serif;color:var(--deep)}
+    .outcome-points{display:flex;flex-wrap:wrap;gap:5px 11px;margin-top:7px;color:#62536b;font-size:11px;line-height:1.4}
+    .outcome-points span{position:relative}
+    .outcome-points span+span:before{content:"·";position:absolute;left:-7px;color:#9a87a7}
+    .variant-preview{align-self:start;min-height:68px;margin:0;padding:12px 0 12px 13px;border-left:2px solid #cbb8dc;color:#55485e;font-size:12px;line-height:1.5}
+    .case-slot{align-self:stretch;display:grid;grid-template-columns:34px 1fr;gap:11px;align-items:center;min-height:66px;margin:0 0 15px;padding:11px 12px;border:1px solid #e3dfd8;border-radius:10px;background:#f8f6f1;color:var(--muted)}
+    .case-slot>i{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:white;color:var(--purple);font-style:normal;font-weight:800;box-shadow:0 2px 7px rgba(37,10,68,.07)}
+    .case-slot>b{grid-column:2;margin:0 0 -7px;color:var(--ink);letter-spacing:.08em}
+    .case-slot>span{grid-column:2;color:var(--muted);font-size:10px;line-height:1.35}
+    .case-slot.published{border-color:#cddfd2;background:#e6f0e9;color:#315c4d}
+    .case-slot.published>i{background:#fff;color:#3e6f61}
+    .case-slot.published>b,.case-slot.published>span{color:#315c4d}
+    .agent-card footer{align-self:end;margin-top:0;padding-top:16px}
+
+    .drawer{width:min(860px,100%);background:#f4f2ec}
+    .drawer-head{padding:18px 28px;background:rgba(244,242,236,.95)}
+    .drawer-head .eyebrow{font-size:10px}
+    .drawer-body{padding:0 38px 52px}
+    .detail-intro{margin:0 -38px;padding:42px 38px 35px;background:white;border-bottom:1px solid #e4e1db}
+    .drawer h2{max-width:720px;margin:17px 0 15px;font-size:clamp(44px,5vw,64px);line-height:.98}
+    .detail-lede{max-width:720px;font-size:17px;line-height:1.58}
+    .customization-note{max-width:720px;margin:24px 0 0;border:1px solid #ded1e9;background:#f2ebf7}
+    .detail-actions{position:sticky;top:75px;z-index:1;margin:0 -38px 0;padding:14px 38px;background:rgba(244,242,236,.96);border-bottom:1px solid #dedad3;backdrop-filter:blur(12px)}
+    .detail-actions .button{min-height:43px}
+    .detail-section{padding:38px 0;border-top:0;border-bottom:1px solid #dedad3}
+    #detailCalculator{scroll-margin-top:160px}
+    .detail-section:last-of-type{border-bottom:0}
+    .detail-section-head{display:grid;grid-template-columns:110px minmax(0,1fr);gap:22px;align-items:start;margin-bottom:20px}
+    .detail-section-head>span{padding-top:6px;color:var(--purple);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .detail-section-head h3{margin:0;font-size:29px;line-height:1.04}
+    .detail-section-head p{grid-column:2;margin:7px 0 0;color:var(--muted);font-size:13px;line-height:1.5}
+
+    .business-case{overflow:hidden;border-radius:18px;background:var(--deep);color:white;box-shadow:0 15px 40px rgba(36,0,106,.13)}
+    .business-case-lead{padding:28px 29px 25px}
+    .business-case-lead>span{display:block;color:#d9bee8;font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    .business-case-lead>strong{display:block;margin:10px 0 8px;font:700 clamp(47px,6vw,68px)/.92 "Origin Display",Arial,sans-serif;letter-spacing:-.035em;color:white}
+    .business-case-lead>p{max-width:670px;margin:0;color:#d1c5d8;font-size:13px;line-height:1.55}
+    .business-case-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ffffff1e;border-bottom:1px solid #ffffff1e;background:#ffffff0a}
+    .business-case-metrics article{min-width:0;padding:19px 21px;border-left:1px solid #ffffff1e}
+    .business-case-metrics article:first-child{border-left:0}
+    .business-case-metrics span{display:block;margin-bottom:6px;color:#bdaec6;font-size:10px;line-height:1.3}
+    .business-case-metrics b{font:700 25px/1 "Origin Display",Arial,sans-serif;color:white;overflow-wrap:anywhere}
+    .business-case-foot{padding:20px 29px 23px}
+    .business-case-foot>p{margin:0;color:#d5cadb;font-size:12px;line-height:1.55}
+    .outcome-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:15px}
+    .outcome-tags span{padding:7px 9px;border:1px solid #ffffff24;border-radius:999px;background:#ffffff0c;color:white;font-size:10px;font-weight:750}
+    .business-case .published-proof{width:100%;margin:16px 0 0;background:#ffffff10;border-color:#ffffff20;color:white}
+    .business-case .published-proof span{color:#ddd1e3}
+    .assumption-line{display:flex;align-items:flex-start;gap:8px;margin:16px 0 0!important;padding-top:15px;border-top:1px solid #ffffff1c;color:#bbaec3!important;font-size:10px!important}
+
+    .detail-calculator{border:1px solid #ded9d2;border-radius:18px;background:white;overflow:hidden}
+    .detail-calculator-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch}
+    .detail-calc-inputs{padding:25px}
+    .detail-calc-inputs>p{margin:0 0 18px;color:var(--muted);font-size:12px;line-height:1.5}
+    .detail-calc-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .detail-calc-fields label>span,.detail-calc-advanced label>span{display:block;margin-bottom:6px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .detail-calc-fields input,.detail-calc-advanced input{width:100%;height:44px;padding:0 11px;border:1px solid var(--line);border-radius:9px;background:white;color:var(--ink);outline:0}
+    .detail-calc-fields input:focus,.detail-calc-advanced input:focus{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+    .detail-calc-advanced{margin-top:18px;padding-top:16px;border-top:1px solid #e8e4de}
+    .detail-calc-advanced summary{display:flex;justify-content:space-between;color:var(--purple);font-size:12px;font-weight:800;cursor:pointer;list-style:none}
+    .detail-calc-advanced summary::-webkit-details-marker{display:none}
+    .detail-calc-advanced-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:16px}
+    .detail-calc-results{display:flex;flex-direction:column;padding:26px;background:#2c0b4b;color:white}
+    .detail-calc-results-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .detail-calc-results-head>span:first-child{color:#d9bee8;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .detail-calc-state{padding:5px 7px;border:1px solid #ffffff20;border-radius:999px;color:#cbbdd3;font-size:9px}
+    .detail-calc-total{display:block;margin:26px 0 5px;font:700 clamp(42px,5vw,57px)/.92 "Origin Display",Arial,sans-serif;color:white;letter-spacing:-.03em;overflow-wrap:anywhere}
+    .detail-calc-total-label{color:#c7b8d0;font-size:11px}
+    .detail-calc-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:23px;border:1px solid #ffffff16;border-radius:9px;background:#ffffff16;overflow:hidden}
+    .detail-calc-metrics article{min-width:0;padding:13px 12px;background:#351255}
+    .detail-calc-metrics span{display:block;margin-bottom:5px;color:#bdaec6;font-size:9px;line-height:1.3}
+    .detail-calc-metrics b{font:700 18px/1 "Origin Display",Arial,sans-serif;color:white;overflow-wrap:anywhere}
+    .detail-calc-note{margin:15px 0 0;color:#bfb0c8;font-size:9px;line-height:1.5}
+    .detail-calc-actions{display:grid;gap:8px;margin-top:auto;padding-top:20px}
+    .detail-calc-actions .button{width:100%}
+    .detail-calc-actions .secondary{background:white;color:var(--deep)!important}
+
+    .variant-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+    .variant-list article,.io-grid article{border-color:#e1ddd6;border-radius:12px;background:white}
+    .variant-list article{padding:17px}
+    .variant-list article:first-child{border-color:#cdb9dc;background:#f2ebf7}
+    .workflow{display:grid;grid-template-columns:repeat(6,minmax(96px,1fr));gap:0;overflow:visible;padding:0}
+    .workflow span{position:relative;padding:13px 8px;border-radius:0;border-right:0;text-align:center;white-space:normal}
+    .workflow span:first-child{border-radius:10px 0 0 10px}
+    .workflow span:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0}
+    .workflow i{display:none}
+    .io-grid{gap:12px}
+    .io-grid article{padding:18px}
+    .human-boundary{padding:22px;border-radius:14px}
+    .pilot{border:1px solid #dedad3;border-left:4px solid var(--coral);border-radius:11px;padding:18px;background:white}
+    .expansion span{border-radius:8px}
+    .detail-caveat{margin:3px 0 0;padding:19px;border-radius:11px;background:#ebe8e1;color:#756c78}
+
+    @media(max-width:740px){
+      .agent-card{grid-template-rows:auto auto auto auto auto auto;min-height:auto;padding:21px}
+      .agent-card>.card-summary,.variant-preview,.case-slot{min-height:0}
+      .agent-card footer{margin-top:0}
+      .drawer-body{padding:0 19px 36px}
+      .detail-intro{margin:0 -19px;padding:30px 19px 27px}
+      .drawer h2{font-size:40px;line-height:1;margin-top:15px}
+      .detail-lede{font-size:16px;line-height:1.55}
+      .customization-note{grid-template-columns:32px 1fr;padding:14px}
+      .detail-actions{top:69px;display:grid;grid-template-columns:1fr 1fr;margin:0 -19px;padding:11px 19px}
+      .detail-actions .button:first-child{grid-column:1/-1}
+      .detail-section{padding:31px 0}
+      #detailCalculator{scroll-margin-top:210px}
+      .detail-section-head{display:block;margin-bottom:17px}
+      .detail-section-head>span{display:block;padding:0;margin-bottom:8px}
+      .detail-section-head h3{font-size:27px}
+      .detail-section-head p{margin-top:7px}
+      .business-case-lead{padding:23px 20px 21px}
+      .business-case-lead>strong{font-size:45px}
+      .business-case-metrics{grid-template-columns:1fr}
+      .business-case-metrics article,.business-case-metrics article:first-child{padding:15px 20px;border-left:0;border-top:1px solid #ffffff1e}
+      .business-case-metrics article:first-child{border-top:0}
+      .business-case-foot{padding:18px 20px 21px}
+      .detail-calculator-grid{grid-template-columns:1fr}
+      .detail-calc-inputs,.detail-calc-results{padding:21px 19px}
+      .detail-calc-fields,.detail-calc-advanced-grid{grid-template-columns:1fr}
+      .detail-calc-fields input,.detail-calc-advanced input{font-size:16px}
+      .detail-calc-total{font-size:45px}
+      .variant-list{grid-template-columns:1fr}
+      .workflow{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+      .workflow span,.workflow span:first-child,.workflow span:last-child{flex:0 0 118px;border:1px solid var(--line);border-radius:9px;padding:12px 9px}
+      .io-grid{gap:9px}
+    }
   </style>
 </head>
 <body>
@@ -317,23 +451,43 @@
 
     const icons={arrow:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>',plus:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>',check:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>'};
     const money=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
-    let activeIndustry='all',activeKind='all',query='',activeAgent=null,lastRoi=null,lastIdeaMatches=[];
-    let roiTouched=new Set();
+    let activeIndustry='all',activeKind='all',query='',activeAgent=null,lastRoi=null,lastDetailRoi=null,lastIdeaMatches=[];
+    let roiTouched=new Set(),detailRoiTouched=new Set();
     let shortlist=new Set(JSON.parse(localStorage.getItem('vsimple-agent-shortlist')||'[]').filter(id=>AGENTS.some(agent=>agent.id===id)));
     const $=selector=>document.querySelector(selector);
     const escapeHtml=value=>String(value||'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
     function proofMarkup(agent,linked=false){const proof=PUBLIC_PROOF[agent.id];if(!proof)return'';const body=`<strong>${proof.figure}</strong><span><b>${proof.label}</b><br>${proof.sub}${linked?' ↗':''}</span>`;return linked?`<a class="published-proof" href="${proof.url}" target="_blank" rel="noreferrer">${body}</a>`:`<div class="published-proof">${body}</div>`}
-    function card(agent){return `<button class="agent-card" data-agent="${agent.id}"><div class="agent-card-top"><span class="industry-pill">${INDUSTRY[agent.industry]} · ${agent.team}</span><span class="kind-pill">${KIND_LABEL[agent.kind]}</span></div><h3>${agent.name}</h3><p>${agent.summary}</p><div class="outcome-preview"><b>THE OUTCOME</b><strong>${agent.value[0]}</strong><span>${agent.value.slice(1).join(' · ')}</span></div><div class="variant-preview"><b>${agent.variants.length>1?'CUSTOMIZE THE WORKFLOW':'EXAMPLE WORKFLOW'}</b>${agent.variants.slice(0,2).join(' · ')}${agent.variants.length>2?` · +${agent.variants.length-2} more`:''}</div>${proofMarkup(agent)}<footer><span>Configured to your world</span><b>Explore agent ${icons.arrow}</b></footer></button>`}
+    function baselineInputs(agent){const model=ROI_MODELS[MODEL_OF[agent.id]]||ROI_MODELS.projectIntake;return{agent,volume:model.volume,minutes:model.minutes,salary:ROI_SALARIES[agent.industry],handled:model.handled,burden:30,errorRate:model.errorRate,prevented:model.prevented,errorCost:model.errorCost,wins:model.wins||0,margin:model.margin||0}}
+    function projectBusinessValue(inputs){const annualUnits=inputs.volume*12,loadedHourly=inputs.salary*(1+inputs.burden/100)/2080,hours=annualUnits*inputs.minutes*(inputs.handled/100)/60,capacity=hours*loadedHourly,errorValue=annualUnits*(inputs.errorRate/100)*(inputs.prevented/100)*inputs.errorCost,revenueValue=inputs.wins*12*inputs.margin;return{...inputs,annualUnits,loadedHourly,hours,capacity,errorValue,revenueValue,annualRun:capacity+errorValue+revenueValue}}
+    function businessCaseNarrative(agent,result){const scale=`${result.volume.toLocaleString()} items each month at ${result.minutes} human minutes per item`;const outcomes={intake:`At ${scale}, the opportunity is to return coordination capacity, release work sooner, and catch incomplete requests before they become downstream rework.`,quote:`At ${scale}, the opportunity is to return estimator or seller capacity, shorten response time, and preserve human control over technical and commercial judgment.`,recon:`At ${scale}, the opportunity is to move people from checking every record to resolving the exceptions that can affect cost, margin, or customer commitments.`,custom:`At ${scale}, the opportunity is to compress handoffs, make stalled work visible, and return administrative capacity while people keep the consequential approvals.`};return outcomes[agent.kind]}
+    function credibilityMarkup(agent){const proof=PUBLIC_PROOF[agent.id];return proof?`<div class="case-slot published"><i>↗</i><b>Published Vsimple result</b><span>${proof.figure} ${proof.label.toLowerCase()} in a related deployed workflow</span></div>`:`<div class="case-slot modeled"><i>≈</i><b>Personalized value model</b><span>Use your volume, touch time, and rework cost inside the agent</span></div>`}
+    function card(agent){return `<button class="agent-card" data-agent="${agent.id}"><div class="agent-card-top"><span class="industry-pill">${INDUSTRY[agent.industry]} · ${agent.team}</span><span class="kind-pill">${KIND_LABEL[agent.kind]}</span></div><h3>${agent.name}</h3><p class="card-summary">${agent.summary}</p><div class="outcome-preview"><b>Business outcome</b><strong>${agent.value[0]}</strong><div class="outcome-points">${agent.value.slice(1).map(item=>`<span>${item}</span>`).join('')}</div></div><div class="variant-preview"><b>Example ways to configure it</b>${agent.variants.slice(0,2).join(' · ')}${agent.variants.length>2?` · +${agent.variants.length-2} more`:''}</div>${credibilityMarkup(agent)}<footer><span>Configured to your world</span><b>Explore agent ${icons.arrow}</b></footer></button>`}
     function renderAgents(){const filtered=AGENTS.filter(agent=>(activeIndustry==='all'||agent.industry===activeIndustry)&&(activeKind==='all'||agent.kind===activeKind)&&(`${agent.name} ${agent.summary} ${agent.team} ${agent.variants.join(' ')} ${agent.inputs.join(' ')} ${agent.outputs.join(' ')}`.toLowerCase().includes(query)));$('#agentGrid').innerHTML=filtered.map(card).join('');$('#agentGrid').style.display=filtered.length?'grid':'none';$('#empty').classList.toggle('visible',!filtered.length)}
     function renderDetail(agent){
       activeAgent=agent;
-      const saved=shortlist.has(agent.id);
-      $('#detailBody').innerHTML=`<div class="detail-meta"><span>${INDUSTRY[agent.industry]}</span><span>·</span><span>${agent.team}</span><span>·</span><span>${KIND_LABEL[agent.kind]}</span></div><h2 id="detailTitle">${agent.name}</h2><p class="detail-lede">${agent.summary}</p><div class="customization-note"><i>✦</i><div><b>Customized to your world</b><p>The agent is configured around your inputs, vocabulary, rules, approvals, exceptions, and system boundaries.</p></div></div><div class="detail-actions"><button class="button" id="detailShortlist">${saved?icons.check:icons.plus}${saved?'Saved to shortlist':'Add to shortlist'}</button><button class="button secondary" id="detailEstimate">Estimate value</button><button class="button secondary" id="detailTalk">Build a brief</button></div><section class="detail-section"><h3>The business outcome</h3><div class="detail-outcome"><strong>${agent.value[0]}</strong><span>${agent.value.slice(1).join(' · ')}</span>${proofMarkup(agent,true)}</div></section><section class="detail-section"><h3>What this agent can cover</h3><div class="variant-list">${agent.variants.map((variant,index)=>`<article><b>${variant}</b><span>${index===0?'A strong first workflow to validate.':'An adjacent version that can share the same agent foundation.'}</span></article>`).join('')}</div></section><section class="detail-section"><h3>How the work moves</h3><div class="workflow">${FLOW[agent.kind].map((step,index)=>`${index?'<i>→</i>':''}<span>${step}</span>`).join('')}</div></section><section class="detail-section"><h3>Inside the workflow</h3><div class="io-grid"><article><em>WHAT GOES IN</em><ul>${agent.inputs.map(item=>`<li>${item}</li>`).join('')}</ul></article><article><em>WHAT THE AGENT DOES</em><ul>${PROCESS[agent.kind].map(item=>`<li>${item}</li>`).join('')}</ul></article><article><em>WHAT COMES OUT</em><ul>${agent.outputs.map(item=>`<li>${item}</li>`).join('')}</ul></article></div></section><section class="detail-section"><div class="human-boundary"><i>✓</i><div><b>Where your people stay in control</b><p>${HUMAN[agent.kind]}</p></div></div></section><section class="detail-section"><h3>Start narrow. Expand from proof.</h3><div class="pilot"><span>A USEFUL FIRST SCOPE</span><b>${agent.start}</b></div><div class="expansion" style="margin-top:13px">${agent.adjacent.map(item=>`<span>${item}</span>`).join('')}</div></section><p class="detail-caveat">The catalogue is a set of starting points, not off-the-shelf products or guaranteed outcomes. The agent becomes valuable when its behavior is designed around how your business actually works.</p>`;
-      $('#detailShortlist').addEventListener('click',()=>{toggleShortlist(agent.id);renderDetail(agent)});
-      $('#detailEstimate').addEventListener('click',()=>{loadRoiDefaults(agent.id);$('#agentDialog').close();$('#roi').scrollIntoView({behavior:'smooth',block:'start'})});
+      const saved=shortlist.has(agent.id),inputs=baselineInputs(agent),result=projectBusinessValue(inputs),growthFields=inputs.wins?`<label><span>Extra wins each month</span><input id="detailRoiWins" data-detail-roi type="number" min="0" step="0.1" value="${inputs.wins}"></label><label><span>Contribution margin per win</span><input id="detailRoiMargin" data-detail-roi type="number" min="0" step="100" value="${inputs.margin}"></label>`:`<input id="detailRoiWins" type="hidden" value="0"><input id="detailRoiMargin" type="hidden" value="0">`;
+      $('#detailBody').innerHTML=`<div class="detail-intro"><div class="detail-meta"><span>${INDUSTRY[agent.industry]}</span><span>·</span><span>${agent.team}</span><span>·</span><span>${KIND_LABEL[agent.kind]}</span></div><h2 id="detailTitle">${agent.name}</h2><p class="detail-lede">${agent.summary}</p><div class="customization-note"><i>✦</i><div><b>The nuance is the product</b><p>Vsimple configures this agent around your actual inputs, vocabulary, rules, approvals, exceptions, and system boundaries.</p></div></div></div><div class="detail-actions"><button class="button" id="detailShortlist">${saved?icons.check:icons.plus}${saved?'Saved to shortlist':'Add to shortlist'}</button><button class="button secondary" id="detailEstimate">Model my value</button><button class="button secondary" id="detailTalk">Build a brief</button></div><section class="detail-section"><div class="detail-section-head"><span>01 · Business case</span><div><h3>The business outcome</h3><p>Operational value first, with assumptions you can inspect and replace.</p></div></div><div class="business-case"><div class="business-case-lead"><span>Directional annual value at full adoption</span><strong>${money.format(result.annualRun)}</strong><p>${businessCaseNarrative(agent,result)}</p></div><div class="business-case-metrics"><article><span>Human capacity returned</span><b>${Math.round(result.hours).toLocaleString()} hrs</b></article><article><span>Annual capacity value</span><b>${money.format(result.capacity)}</b></article><article><span>Avoidable rework value</span><b>${money.format(result.errorValue)}</b></article></div><div class="business-case-foot"><div class="outcome-tags">${agent.value.map(item=>`<span>${item}</span>`).join('')}</div><p>This is the economic case to test: give repeatable coordination to the agent, let people handle judgment and exceptions, and measure the difference on a real workflow.</p>${proofMarkup(agent,true)}<p class="assumption-line"><span>ⓘ</span><span>Starting assumptions: ${inputs.volume.toLocaleString()} items/month · ${inputs.minutes} minutes/item · ${inputs.handled}% repeatable work handled · ${inputs.errorRate}% error/rework rate. This is a planning model, not a promised result.</span></p></div></div></section><section class="detail-section" id="detailCalculator"><div class="detail-section-head"><span>02 · Value model</span><div><h3>Calculate this agent’s potential</h3><p>Start with a workflow-specific baseline, then replace it with what is true in your operation.</p></div></div><div class="detail-calculator"><div class="detail-calculator-grid"><div class="detail-calc-inputs"><p>The fields below are already tuned to the work this agent would perform. Editing any input updates the model immediately.</p><div class="detail-calc-fields"><label><span>Items each month</span><input id="detailRoiVolume" data-detail-roi type="number" min="0" step="1" value="${inputs.volume}"></label><label><span>Human minutes per item</span><input id="detailRoiMinutes" data-detail-roi type="number" min="0" step="1" value="${inputs.minutes}"></label><label><span>Annual salary</span><input id="detailRoiSalary" data-detail-roi type="number" min="0" step="1000" value="${inputs.salary}"></label><label><span>Repeatable work handled</span><div class="suffix-input"><input id="detailRoiHandled" data-detail-roi type="number" min="0" max="100" step="1" value="${inputs.handled}"><i>%</i></div></label></div><details class="detail-calc-advanced"><summary>Include rework and commercial assumptions <span>↓</span></summary><div class="detail-calc-advanced-grid"><label><span>Employment burden</span><div class="suffix-input"><input id="detailRoiBurden" data-detail-roi type="number" min="0" max="200" step="1" value="${inputs.burden}"><i>%</i></div></label><label><span>Current error / rework rate</span><div class="suffix-input"><input id="detailRoiErrorRate" data-detail-roi type="number" min="0" max="100" step="0.1" value="${inputs.errorRate}"><i>%</i></div></label><label><span>Errors the agent could prevent</span><div class="suffix-input"><input id="detailRoiPrevented" data-detail-roi type="number" min="0" max="100" step="1" value="${inputs.prevented}"><i>%</i></div></label><label><span>Average cost per error</span><input id="detailRoiErrorCost" data-detail-roi type="number" min="0" step="50" value="${inputs.errorCost}"></label>${growthFields}</div></details></div><aside class="detail-calc-results"><div class="detail-calc-results-head"><span>Modeled outcome</span><span class="detail-calc-state" id="detailRoiState">Directional baseline</span></div><strong class="detail-calc-total" id="detailRoiAnnual">${money.format(result.annualRun)}</strong><span class="detail-calc-total-label">annual run-rate value at full adoption</span><div class="detail-calc-metrics"><article><span>Hours returned / year</span><b id="detailRoiHours">${Math.round(result.hours).toLocaleString()}</b></article><article><span>Capacity value</span><b id="detailRoiCapacity">${money.format(result.capacity)}</b></article><article><span>Avoidable rework</span><b id="detailRoiErrors">${money.format(result.errorValue)}</b></article><article><span>Potential added margin</span><b id="detailRoiRevenue">${money.format(result.revenueValue)}</b></article></div><p class="detail-calc-note">Annual run-rate excludes ramp time, software, and implementation cost. Confirm volume, touch time, execution rate, rework incidence, and achievable automation on a representative artifact before making an investment decision.</p><div class="detail-calc-actions"><button class="button small" id="detailRoiBrief">Put this estimate in my brief →</button><button class="button secondary small" id="detailRoiFull">Open the full ROI model</button></div></aside></div></div></section><section class="detail-section"><div class="detail-section-head"><span>03 · Configuration</span><div><h3>What this agent can cover</h3><p>One reusable foundation, configured around the version of the work that matters to you.</p></div></div><div class="variant-list">${agent.variants.map((variant,index)=>`<article><b>${variant}</b><span>${index===0?'A focused first workflow to validate on a real artifact.':'An adjacent version that can share the same agent foundation.'}</span></article>`).join('')}</div></section><section class="detail-section"><div class="detail-section-head"><span>04 · Workflow</span><div><h3>How the work moves</h3><p>A visible path from raw request to a controlled result.</p></div></div><div class="workflow">${FLOW[agent.kind].map((step,index)=>`${index?'<i>→</i>':''}<span>${step}</span>`).join('')}</div></section><section class="detail-section"><div class="detail-section-head"><span>05 · Inside</span><div><h3>What goes in—and what comes out</h3></div></div><div class="io-grid"><article><em>WHAT GOES IN</em><ul>${agent.inputs.map(item=>`<li>${item}</li>`).join('')}</ul></article><article><em>WHAT THE AGENT DOES</em><ul>${PROCESS[agent.kind].map(item=>`<li>${item}</li>`).join('')}</ul></article><article><em>WHAT COMES OUT</em><ul>${agent.outputs.map(item=>`<li>${item}</li>`).join('')}</ul></article></div></section><section class="detail-section"><div class="human-boundary"><i>✓</i><div><b>Where your people stay in control</b><p>${HUMAN[agent.kind]}</p></div></div></section><section class="detail-section"><div class="detail-section-head"><span>06 · Pilot</span><div><h3>Start narrow. Expand from evidence.</h3><p>Prove the behavior and the value before extending the agent into adjacent work.</p></div></div><div class="pilot"><span>A USEFUL FIRST SCOPE</span><b>${agent.start}</b></div><div class="expansion" style="margin-top:13px">${agent.adjacent.map(item=>`<span>${item}</span>`).join('')}</div></section><p class="detail-caveat">Every agent shown here is a starting point, not an off-the-shelf product or guaranteed outcome. Its value depends on configuring the behavior around your operation and validating the assumptions with your data.</p>`;
+      detailRoiTouched.clear();updateDetailRoi(agent);
+      $('#detailShortlist').addEventListener('click',event=>{toggleShortlist(agent.id);const nowSaved=shortlist.has(agent.id);event.currentTarget.innerHTML=`${nowSaved?icons.check:icons.plus}${nowSaved?'Saved to shortlist':'Add to shortlist'}`});
+      $('#detailEstimate').addEventListener('click',()=>$('#detailCalculator').scrollIntoView({behavior:'smooth',block:'start'}));
       $('#detailTalk').addEventListener('click',()=>{if(!shortlist.has(agent.id))toggleShortlist(agent.id);$('#agentDialog').close();openBrief()});
+      document.querySelectorAll('[data-detail-roi]').forEach(input=>input.addEventListener('input',()=>{detailRoiTouched.add(input.id);updateDetailRoi(agent)}));
+      $('#detailRoiFull').addEventListener('click',()=>useDetailInFullRoi(agent));
+      $('#detailRoiBrief').addEventListener('click',()=>addDetailRoiToBrief(agent));
       if(!$('#agentDialog').open)$('#agentDialog').showModal();
+    }
+    function detailRoiNumber(id){const input=$(`#${id}`);return Math.max(0,Number.parseFloat(input?.value)||0)}
+    function updateDetailRoi(agent){
+      const inputs={agent,volume:detailRoiNumber('detailRoiVolume'),minutes:detailRoiNumber('detailRoiMinutes'),salary:detailRoiNumber('detailRoiSalary'),handled:Math.min(100,detailRoiNumber('detailRoiHandled')),burden:Math.min(200,detailRoiNumber('detailRoiBurden')),errorRate:Math.min(100,detailRoiNumber('detailRoiErrorRate')),prevented:Math.min(100,detailRoiNumber('detailRoiPrevented')),errorCost:detailRoiNumber('detailRoiErrorCost'),wins:detailRoiNumber('detailRoiWins'),margin:detailRoiNumber('detailRoiMargin')};
+      lastDetailRoi=projectBusinessValue(inputs);
+      $('#detailRoiAnnual').textContent=money.format(lastDetailRoi.annualRun);$('#detailRoiHours').textContent=Math.round(lastDetailRoi.hours).toLocaleString();$('#detailRoiCapacity').textContent=money.format(lastDetailRoi.capacity);$('#detailRoiErrors').textContent=money.format(lastDetailRoi.errorValue);$('#detailRoiRevenue').textContent=money.format(lastDetailRoi.revenueValue);$('#detailRoiState').textContent=detailRoiTouched.size?'Using your inputs':'Directional baseline';
+    }
+    function useDetailInFullRoi(agent){
+      if(!lastDetailRoi)return;const r=lastDetailRoi;loadRoiDefaults(agent.id);setRoiValue('roiVolume',r.volume);setRoiValue('roiMinutes',r.minutes);setRoiValue('roiSalary',r.salary);setRoiValue('roiHandled',r.handled);setRoiValue('roiBurden',r.burden);setRoiValue('roiErrorRate',r.errorRate);setRoiValue('roiPrevented',r.prevented);setRoiValue('roiErrorCost',r.errorCost);setRoiValue('roiWins',r.wins);setRoiValue('roiMargin',r.margin);['roiVolume','roiMinutes','roiSalary','roiHandled','roiBurden','roiErrorRate','roiPrevented','roiErrorCost'].forEach(id=>roiTouched.add(id));calculateRoi();$('#agentDialog').close();$('#roi').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function addDetailRoiToBrief(agent){
+      if(!lastDetailRoi)return;const r=lastDetailRoi;if(!shortlist.has(agent.id)){shortlist.add(agent.id);saveShortlist()}const block=`Value model for ${agent.name}:\n• ${money.format(r.annualRun)} annual run-rate value at full adoption\n• ${Math.round(r.hours).toLocaleString()} hours returned per year\n• ${money.format(r.capacity)} capacity value + ${money.format(r.errorValue)} avoidable rework${r.revenueValue?` + ${money.format(r.revenueValue)} potential added margin`:''}\n• Inputs: ${r.volume.toLocaleString()} items/month, ${r.minutes} minutes/item, ${Math.round(r.handled)}% repeatable work, ${money.format(r.salary)} annual salary\n• Directional until validated with actual volume, measured touch time, execution rate, rework incidence, and commercial terms.`;const notes=$('#briefNotes');notes.value=[notes.value.trim(),block].filter(Boolean).join('\n\n');$('#agentDialog').close();openBrief();
     }
     function saveShortlist(){localStorage.setItem('vsimple-agent-shortlist',JSON.stringify([...shortlist]));updateShortlist()}
     function toggleShortlist(id){shortlist.has(id)?shortlist.delete(id):shortlist.add(id);saveShortlist();showToast(shortlist.has(id)?'Added to your shortlist':'Removed from your shortlist')}
