@@ -59,7 +59,7 @@ function protectedPage(payload) {
       <button id="unlockButton" type="submit">View the agent experience →</button>
       <p class="status" id="unlockStatus" role="status" aria-live="polite"></p>
     </form>
-    <p class="privacy">The password is used in this browser tab to decrypt the experience. It is never sent to the website.</p>
+    <p class="privacy">The password is remembered in this browser to unlock the experience. It is never sent to the website.</p>
   </main>
   <script>
     const payload=${JSON.stringify(payload)};
@@ -69,12 +69,12 @@ function protectedPage(payload) {
       const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveKey']);
       const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:bytes(payload.salt),iterations:${iterations},hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['decrypt']);
       const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:bytes(payload.iv),tagLength:128},key,bytes(payload.ciphertext));
-      if(remember)sessionStorage.setItem(storageKey,password);
+      if(remember)localStorage.setItem(storageKey,password);
       document.open();document.write(new TextDecoder().decode(plain));document.close();
     }
     const form=document.querySelector('#unlockForm'),input=document.querySelector('#sitePassword'),button=document.querySelector('#unlockButton'),status=document.querySelector('#unlockStatus');
     form.addEventListener('submit',async event=>{event.preventDefault();button.disabled=true;button.textContent='Unlocking…';status.textContent='';try{await unlock(input.value)}catch{status.textContent='That password did not work. Please try again.';input.select();button.disabled=false;button.textContent='View the agent experience →'}});
-    const saved=sessionStorage.getItem(storageKey);if(saved){button.disabled=true;button.textContent='Unlocking…';unlock(saved,false).catch(()=>{sessionStorage.removeItem(storageKey);button.disabled=false;button.textContent='View the agent experience →'})}
+    const saved=localStorage.getItem(storageKey);if(saved){button.disabled=true;button.textContent='Unlocking…';unlock(saved,false).catch(()=>{localStorage.removeItem(storageKey);button.disabled=false;button.textContent='View the agent experience →'})}
   </script>
 </body>
 </html>`
