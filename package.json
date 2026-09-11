@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node build-worker.js"
+    "build": "vite build && node build-worker.js && node protect-site.js"
   },
   "dependencies": {
     "@openai/sites-vite-plugin": "latest",
